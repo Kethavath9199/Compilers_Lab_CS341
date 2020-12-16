@@ -1,0 +1,30 @@
+1: func begin fact
+2: t0 = x_1_fact_0
+3: t1 = 0
+4: t2 = 1
+5: if(t0 == t1) goto 7
+6: t2 = 0
+7: if(t2 == 0) goto 10   
+8: t0 = 1
+9: return t0
+10: t0 = x_1_fact_0
+11: t1 = x_1_fact_0
+12: t2 = 1
+13: t3 = t1 - t2
+14: param t3
+15: call fact,2
+16: refparam t1
+17: t2 = t0 * t1
+18: return t2
+19: func end
+20: func begin main
+21: t0 = 4
+22: x_2_main = t0
+23: t0 = x_2_main
+24: param t0
+25: call fact,2
+26: refparam t0
+27: t1 = 1
+28: t2 = t0 - t1
+29: y_2_main = t2
+30: func end
